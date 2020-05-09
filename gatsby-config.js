@@ -2,8 +2,16 @@ module.exports = {
   plugins: [
     {
       resolve: `gatsby-theme-blog`,
-      options: {},
+      options: {}
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `markdown-pages`,
+        path: `${__dirname}/content/posts`
+      }
+    },
+    `gatsby-plugin-netlify-cms`
   ],
   // Customize your site metadata:
   siteMetadata: {
@@ -13,12 +21,12 @@ module.exports = {
     social: [
       {
         name: `twitter`,
-        url: `https://twitter.com/gatsbyjs`,
+        url: `https://twitter.com/gatsbyjs`
       },
       {
         name: `github`,
-        url: `https://github.com/gatsbyjs`,
-      },
-    ],
-  },
+        url: `https://github.com/gatsbyjs`
+      }
+    ]
+  }
 }
